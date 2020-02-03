@@ -12,4 +12,9 @@ class table_anggota extends Model
     ];
     protected $primaryKey='id';
     public $timestamps=false;
+    
+    public function peminjaman ()
+    {
+        return $this->hasMany ('App\table_peminjaman');
+    }
 }

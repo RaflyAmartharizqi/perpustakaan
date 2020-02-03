@@ -34,6 +34,9 @@ class table_petugas extends Authenticable implements JWTSubject
     {
         return[];
     }
-
+    public function peminjaman ()
+    {
+        return $this->hasMany ('App\table_peminjaman');
+    }
    
 }

@@ -12,4 +12,10 @@ class table_buku extends Model
     ];
     protected $primaryKey='id';
     public $timestamps=false;
+
+    public function detail_peminjaman ()
+    {
+        return $this->hasMany ('App\table_detail_peminjaman');
+    }
 }
+
